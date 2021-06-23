@@ -1,0 +1,14 @@
+version: "3"
+services:
+  tad:
+    image: postgres:latest
+    container_name: "postgres"
+    environment:
+      - POSTGRES_DB=easypark
+      - POSTGRES_USER=easypark
+      - POSTGRES_PASSWORD=easypark
+      - TZ=GMT
+    volumes:
+      - "./data/postgres:/var/lib/postgresql/data"
+    ports:
+      - 35432:5432
